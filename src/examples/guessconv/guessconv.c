@@ -206,6 +206,7 @@ main(int argc, char **argv)
             lang = optarg;
             break;
         case 'i':
+            fprintf(stderr, "Input file: %s\n", optarg);
             if ((infile = fopen(optarg, "r")) == NULL)
             {
                 fprintf(stderr, "%s: unable to open '%s' for reading: %s\n", argv[0], optarg, strerror(errno));
@@ -213,6 +214,7 @@ main(int argc, char **argv)
             }
             break;
         case 'o':
+            fprintf(stderr, "Output file: %s\n", optarg);
             if ((outfile = fopen(optarg, "w")) == NULL)
             {
                 fprintf(stderr, "%s: unable to open '%s' for writing: %s\n", argv[0], optarg, strerror(errno));
