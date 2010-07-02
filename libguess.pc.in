@@ -1,0 +1,15 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+datarootdir=@datarootdir@
+data_dir=@datadir@/@PACKAGE_NAME@
+
+version=@PACKAGE_VERSION@
+include_dir=@includedir@/libguess
+lib_dir=@libdir@
+
+Name: libguess
+Description: A library which is used for blind character set detection.
+Version: @PACKAGE_VERSION@
+Libs: -L${lib_dir} -lguess
+Cflags: -I${include_dir}
+
