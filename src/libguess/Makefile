@@ -7,6 +7,8 @@ SRCS = guess.c		\
        guess_impl.c	\
        dfa.c
 
+INCLUDES = libguess.h
+
 include ../../buildsys.mk
 include ../../extra.mk
 
