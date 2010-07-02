@@ -565,6 +565,9 @@
 (define-dfa cp1250
  (init
   (((#x20 #x7e)) init          1.0)
+  (((#x8a #x8f)) init          1.0)
+  ((#x9a)        init          1.0)
+  (((#x9c #xa1)) init          1.0)
   ((#xa3)        init          1.0)
   ((#xa5)        init          1.0)
   ((#xaa)        init          1.0)
