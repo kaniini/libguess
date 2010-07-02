@@ -580,3 +580,37 @@
   (((#xd8 #xf6)) init          1.0)
   (((#xf8 #xfe)) init          1.0)))
 
+;;;
+;;; baltic (estonia/latvia/lithuania)
+;;;
+
+(define-dfa iso8859_13
+ (init
+  (((#x20 #x7e)) init          1.0)
+  ((#xa8)        init          1.0)
+  ((#xaa)        init          1.0)
+  ((#xaf)        init          1.0)
+  ((#xb8)        init          1.0)
+  ((#xba)        init          1.0)
+  ((#xbf)        init          1.0)
+  (((#xc0 #xd6)) init          1.0)
+  (((#xd8 #xf6)) init          1.0)
+  (((#xf8 #xfe)) init          1.0)))
+
+(define-dfa cp1257
+ (init
+  (((#x20 #x7e)) init          1.0)
+  ((#x80)        init          1.0)
+  ((#x82)        init          1.0)
+  (((#x84 #x87)) init          1.0)
+  ((#x89)        init          1.0)
+  ((#x8b)        init          1.0)
+  (((#x8d #x8f)) init          1.0)
+  (((#x91 #x97)) init          1.0)
+  ((#x99)        init          1.0)
+  ((#x9b)        init          1.0)
+  (((#x9d #x9e)) init          1.0)
+  ((#xa0)        init          1.0)
+  (((#xa2 #xa4)) init          1.0)
+  (((#xa6 #xff)) init          1.0)))
+

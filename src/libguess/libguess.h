@@ -57,6 +57,7 @@ const char *guess_tr(const char *buf, int buflen);
 const char *guess_gr(const char *buf, int buflen);
 const char *guess_hw(const char *buf, int buflen);
 const char *guess_pl(const char *buf, int buflen);
+const char *guess_bl(const char *buf, int buflen);
 
 typedef const char *(*guess_impl_f)(const char *buf, int len);
 
@@ -74,6 +75,7 @@ int libguess_validate_utf8(const char *buf, int buflen);
 #define GUESS_REGION_GR		"greek"
 #define GUESS_REGION_HW		"hebrew"
 #define GUESS_REGION_PL		"polish"
+#define GUESS_REGION_BL		"baltic"
 
 typedef void (*libguess_result_f)(const char *encodingname, const char *res);
 

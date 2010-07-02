@@ -40,6 +40,7 @@ guess_init(void)
     guess_impl_register(GUESS_REGION_GR, guess_gr);
     guess_impl_register(GUESS_REGION_HW, guess_hw);
     guess_impl_register(GUESS_REGION_PL, guess_pl);
+    guess_impl_register(GUESS_REGION_BL, guess_bl);
 }
 
 const char *
