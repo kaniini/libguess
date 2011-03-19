@@ -20,7 +20,7 @@ int main(int argc, char **argv)
 
     while (fgets(buf, 1024 * 1024 - 1, fp))
     {
-        printf("length = %ld\n", strlen(buf));
+        printf("length = %zu\n", strlen(buf));
         printf("jp = %s\n", libguess_determine_encoding(buf, strlen(buf), GUESS_REGION_JP));
         printf("tw = %s\n", libguess_determine_encoding(buf, strlen(buf), GUESS_REGION_TW));
         printf("cn = %s\n", libguess_determine_encoding(buf, strlen(buf), GUESS_REGION_CN));
