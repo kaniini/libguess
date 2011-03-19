@@ -168,7 +168,7 @@
 
 (define (main args)
   (unless (= (length args) 2)
-    (error "usage: ~a <outout-file.c>" (car args)))
+    (error (format #f "usage: ~a <output-file.c>" (car args))))
   (with-output-to-file (cadr args)
     (lambda ()
       (print "/* State transition table for character code guessing */")
