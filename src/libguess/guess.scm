@@ -227,20 +227,27 @@
   (init
    (((#x00 #x7f)) init         1.0)
    (((#xc2 #xdf)) 1byte_more   1.0)
-   (((#xe0 #xef)) 2byte_more   1.0)
-   (((#xf0 #xf7)) 3byte_more   1.0)
-   (((#xf8 #xfb)) 4byte_more   1.0)
-   (((#xfc #xfd)) 5byte_more   1.0))
+   (((#xe0 #xe0)) 2byte_more1  1.0)
+   (((#xe1 #xec)) 2byte_more2  1.0)
+   (((#xed #xed)) 2byte_more3  1.0)
+   (((#xee #xef)) 2byte_more2  1.0)
+   (((#xf0 #xf0)) 3byte_more1  1.0)
+   (((#xf1 #xf3)) 3byte_more2  1.0)
+   (((#xf4 #xf4)) 3byte_more3  1.0))
   (1byte_more
    (((#x80 #xbf)) init         1.0))
-  (2byte_more
+  (2byte_more1
+   (((#xa0 #xbf)) 1byte_more   1.0))
+  (2byte_more2
    (((#x80 #xbf)) 1byte_more   1.0))
-  (3byte_more
-   (((#x80 #xbf)) 2byte_more   1.0))
-  (4byte_more
-   (((#x80 #xbf)) 3byte_more   1.0))
-  (5byte_more
-   (((#x80 #xbf)) 4byte_more   1.0)))
+  (2byte_more3
+   (((#x80 #x9f)) 1byte_more   1.0))
+  (3byte_more1
+   (((#x90 #xbf)) 2byte_more2  1.0))
+  (3byte_more2
+   (((#x80 #xbf)) 2byte_more2  1.0))
+  (3byte_more3
+   (((#x80 #x8f)) 2byte_more2  1.0)))
 
 ;;;
 ;;; UCS-2LE
