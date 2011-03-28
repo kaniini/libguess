@@ -31,6 +31,7 @@ int main(int argc, char **argv)
         printf("gr = %s\n", libguess_determine_encoding(buf, strlen(buf), GUESS_REGION_GR));
         printf("hw = %s\n", libguess_determine_encoding(buf, strlen(buf), GUESS_REGION_HW));
         printf("pl = %s\n", libguess_determine_encoding(buf, strlen(buf), GUESS_REGION_PL));
+        printf("bl = %s\n", libguess_determine_encoding(buf, strlen(buf), GUESS_REGION_BL));
     }
     fclose(fp);
 
