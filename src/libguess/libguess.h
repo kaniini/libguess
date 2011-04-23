@@ -40,10 +40,11 @@
 
 #include <stdlib.h>
 #include <string.h>
-#include <mowgli.h>
 
 /* prototypes */
 #ifdef LIBGUESS_CORE
+
+#include <mowgli.h>
 
 #include "autoconf.h"
 
