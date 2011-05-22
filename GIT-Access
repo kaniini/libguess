@@ -1,0 +1,6 @@
+The libguess GIT repository can be checked out using the following command:
+	git clone git://git.atheme.org/libguess.git libguess
+
+libguess's GIT repository depot can be browsed over the internet at 
+the following address:
+	http://git.atheme.org/
