@@ -22,8 +22,6 @@ guess_impl_register(const char *lang, guess_impl_f impl)
 static void
 guess_init(void)
 {
-    mowgli_init();
-
     /* check if already initialized */
     if (guess_impl_list != NULL)
         return;
