@@ -19,8 +19,8 @@ guess_impl_register(const char *lang, guess_impl_f impl)
     mowgli_patricia_add(guess_impl_list, lang, impl);
 }
 
-static void
-guess_init(void)
+void
+libguess_init(void)
 {
     /* check if already initialized */
     if (guess_impl_list != NULL)
@@ -46,7 +46,7 @@ libguess_determine_encoding(const char *inbuf, int buflen, const char *lang)
 {
     guess_impl_f impl;
 
-    guess_init();
+    libguess_init();
 
     impl = mowgli_patricia_retrieve(guess_impl_list, lang);
     if (impl != NULL)

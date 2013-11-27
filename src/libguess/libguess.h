@@ -82,4 +82,9 @@ typedef void (*libguess_result_f)(const char *encodingname, const char *res);
 
 const char *libguess_determine_encoding(const char *buf, int buflen, const char *langset);
 
+/* In a multi-threaded application, libguess must be initialized before use in
+ * order to prevent race conditions.  In a single-threaded application, calling
+ * libguess_init() explicitly is not necessary. */
+void libguess_init(void);
+
 #endif
