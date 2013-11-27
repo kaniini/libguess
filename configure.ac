@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ(2.59)
-AC_INIT([libguess], [1.1], [bugs+libguess@atheme.org])
+AC_INIT([libguess], [1.2], [bugs+libguess@atheme.org])
 AC_CONFIG_SRCDIR([src/libguess/guess.c])
 AC_CONFIG_HEADER([src/libguess/autoconf.h])
 AC_CONFIG_MACRO_DIR([m4])
