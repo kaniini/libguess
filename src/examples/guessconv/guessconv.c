@@ -47,7 +47,7 @@ print_version(void)
     printf("Atheme guessconv, version 1.0.\n");
     printf("Copyright (c) 2010 William Pitcock <nenolod@atheme.org>\n");
     printf("See COPYING in the libguess source tree for license details.\n");
-    printf("\nReport bugs to <http://jira.atheme.org/> against the libguess product.\n");
+    printf("\nReport bugs to https://github.com/atheme/libguess\n");
 
     exit(EXIT_SUCCESS);
 }

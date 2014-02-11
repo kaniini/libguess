@@ -100,7 +100,6 @@ if [ "x$PUBLISH" = "xyes" ]; then
 fi
 
 echo
-echo "Done. If you have any bugs to report, report them against"
-echo "the distfiles.atheme.org component at http://jira.atheme.org"
-echo "Thanks!"
+echo "Done. If you have any bugs to report, report them using"
+echo "https://github.com/atheme/libguess. Thanks!"
 echo
