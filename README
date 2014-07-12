@@ -38,4 +38,4 @@ libguess is fully reentrant, using only local stack memory for DFA operations.
 I found a bug:
 --------------
 
-Please report your bug to http://jira.atheme.org/ against the libguess component.
+Please report your bug using GitHub issues.
