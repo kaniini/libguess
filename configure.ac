@@ -41,8 +41,6 @@ AC_CHECK_FUNCS([memset setlocale strcasecmp strchr strdup strerror strtol strtod
 AC_CHECK_FUNCS([printf sprintf snprintf vsnprintf gettimeofday strndup strlcpy strlcat])
 AC_FUNC_STAT
 
-PKG_CHECK_MODULES([MOWGLI], [libmowgli-2 >= 2.0.0], [], [AC_MSG_ERROR([Install Mowgli from http://atheme.org/project/mowgli.])])
-
 # Check for optional features.
 EXAMPLES_BUILD=""
 AC_ARG_ENABLE(examples,
