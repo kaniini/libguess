@@ -12,6 +12,5 @@ INCLUDES = libguess.h
 include ../../buildsys.mk
 include ../../extra.mk
 
-CPPFLAGS += ${LIB_CPPFLAGS} ${MOWGLI_CFLAGS} -I. -I.. -DLIBGUESS_CORE
+CPPFLAGS += ${LIB_CPPFLAGS} -I. -I.. -DLIBGUESS_CORE
 CFLAGS += ${LIB_CFLAGS}
-LIBS += ${MOWGLI_LIBS}

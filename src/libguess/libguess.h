@@ -44,8 +44,6 @@
 /* prototypes */
 #ifdef LIBGUESS_CORE
 
-#include <mowgli.h>
-
 #include "autoconf.h"
 
 const char *guess_jp(const char *buf, int buflen);
@@ -82,9 +80,9 @@ typedef void (*libguess_result_f)(const char *encodingname, const char *res);
 
 const char *libguess_determine_encoding(const char *buf, int buflen, const char *langset);
 
-/* In a multi-threaded application, libguess must be initialized before use in
- * order to prevent race conditions.  In a single-threaded application, calling
- * libguess_init() explicitly is not necessary. */
+/* This function does nothing. It is provided for API-compatibility with
+ * libguess 1.2, which required calling this before using it from multiple
+ * threads. */
 void libguess_init(void);
 
 #endif
