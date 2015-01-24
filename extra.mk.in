@@ -73,7 +73,6 @@ INSTALL_PROGRAM ?= @INSTALL_PROGRAM@
 PLUGIN_LDFLAGS ?= @PLUGIN_LDFLAGS@
 PATH_SEPARATOR ?= @PATH_SEPARATOR@
 EXEEXT ?= @EXEEXT@
-LIB_CPPFLAGS ?= @LIB_CPPFLAGS@
 exec_prefix ?= @exec_prefix@
 host_os ?= @host_os@
 target_os ?= @target_os@
