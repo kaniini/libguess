@@ -41,6 +41,10 @@
 #include <stdlib.h>
 #include <string.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /* prototypes */
 #ifdef LIBGUESS_CORE
 
@@ -84,5 +88,9 @@ const char *libguess_determine_encoding(const char *buf, int buflen, const char 
  * libguess 1.2, which required calling this before using it from multiple
  * threads. */
 void libguess_init(void);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
