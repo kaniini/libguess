@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include <strings.h>
 
 #include "libguess.h"
@@ -7,31 +8,37 @@ struct guess_impl {
     guess_impl_f impl;
 };
 
+/* keep these in alphabetical order! */
 static const struct guess_impl guess_impl_list[] = {
-    {GUESS_REGION_JP, guess_jp},
-    {GUESS_REGION_TW, guess_tw},
-    {GUESS_REGION_CN, guess_cn},
-    {GUESS_REGION_KR, guess_kr},
-    {GUESS_REGION_RU, guess_ru},
-    {GUESS_REGION_AR, guess_ar},
-    {GUESS_REGION_TR, guess_tr},
-    {GUESS_REGION_GR, guess_gr},
-    {GUESS_REGION_HW, guess_hw},
-    {GUESS_REGION_PL, guess_pl},
-    {GUESS_REGION_BL, guess_bl},
+    {"arabic", guess_ar},
+    {"baltic", guess_bl},
+    {"chinese", guess_cn},
+    {"greek", guess_gr},
+    {"hebrew", guess_hw},
+    {"japanese", guess_jp},
+    {"korean", guess_kr},
+    {"polish", guess_pl},
+    {"russian", guess_ru},
+    {"taiwanese", guess_tw},
+    {"turkish", guess_tr},
 };
+
+static int
+guess_cmp_impl(const void *key, const void *ptr)
+{
+    const struct guess_impl *impl = ptr;
+    return strcasecmp(key, impl->lang);
+}
 
 static guess_impl_f
 guess_find_impl(const char *lang)
 {
-    int i;
+    struct guess_impl *impl =
+        bsearch(lang, guess_impl_list,
+                sizeof guess_impl_list / sizeof(struct guess_impl),
+                sizeof(struct guess_impl), guess_cmp_impl);
 
-    for (i = 0; i < sizeof(guess_impl_list) / sizeof(guess_impl_list[0]); i++) {
-        if (!strcasecmp(guess_impl_list[i].lang, lang))
-            return guess_impl_list[i].impl;
-    }
-
-    return 0;
+    return (impl != NULL) ? impl->impl : NULL;
 }
 
 void
