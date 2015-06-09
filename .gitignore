@@ -1,0 +1,14 @@
+*.o
+*.so
+.deps
+aclocal.m4
+autoconf.h
+autoconf.h.in
+autom4te.cache/
+buildsys.mk
+config.log
+config.status
+configure
+extra.mk
+guess_testharness
+libguess.pc
